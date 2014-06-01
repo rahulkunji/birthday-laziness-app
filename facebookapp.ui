@@ -14,7 +14,7 @@
    <string>Facebook - Bulk reply App</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QPlainTextEdit" name="keytext">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+   <widget class="QPlainTextEdit" name="prefix_msg">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -34,7 +34,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_3">
+   <widget class="QPlainTextEdit" name="suffix_msg">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -54,7 +54,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="prefix_radioButton">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -67,7 +67,7 @@
      <string>Prefix</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="suffix_radioButton">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -80,7 +80,7 @@
      <string>Suffix</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_3">
+   <widget class="QRadioButton" name="Both_radioButton">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -93,7 +93,7 @@
      <string>Both</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="submit">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -106,7 +106,7 @@
      <string>Submit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="fblbl">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -119,7 +119,7 @@
      <string>Facebook Key</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="birthdate">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -132,7 +132,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Birthdate&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="prefixmg">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -145,7 +145,7 @@
      <string>Prefix Message</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="postfixmsg">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -158,7 +158,7 @@
      <string>Suffix Message</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="msgformat">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -171,7 +171,7 @@
      <string>Message Format</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="likelbl">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -184,7 +184,7 @@
      <string>Like posts?</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_4">
+   <widget class="QRadioButton" name="no_radioButton">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -197,7 +197,7 @@
      <string>No</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_5">
+   <widget class="QRadioButton" name="yes_radioButton">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -210,7 +210,7 @@
      <string>Yes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="help">
     <property name="geometry">
      <rect>
       <x>280</x>
