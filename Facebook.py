@@ -6,6 +6,9 @@
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
+# USE pyqt signal slot mechanism to write the code for facebook api here
+#self.pushButton.click.connect(self.<yourfunction>)
+#define <yourfunction> later on
 
 from PyQt4 import QtCore, QtGui
 
