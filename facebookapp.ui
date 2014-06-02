@@ -223,6 +223,19 @@
      <string>View Help</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="Connection">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>450</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connection Test</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

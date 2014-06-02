@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'facebookapp.ui'
 #
-# Created: Sun Jun 01 12:16:46 2014
+# Created: Mon Jun 02 22:53:29 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -80,6 +80,9 @@ class Ui_MainWindow(object):
         self.help = QtGui.QPushButton(self.centralWidget)
         self.help.setGeometry(QtCore.QRect(280, 410, 114, 32))
         self.help.setObjectName(_fromUtf8("help"))
+        self.Connection = QtGui.QPushButton(self.centralWidget)
+        self.Connection.setGeometry(QtCore.QRect(210, 450, 114, 32))
+        self.Connection.setObjectName(_fromUtf8("Connection"))
         MainWindow.setCentralWidget(self.centralWidget)
         self.menuBar = QtGui.QMenuBar(MainWindow)
         self.menuBar.setGeometry(QtCore.QRect(0, 0, 511, 21))
@@ -110,4 +113,15 @@ class Ui_MainWindow(object):
         self.no_radioButton.setText(_translate("MainWindow", "No", None))
         self.yes_radioButton.setText(_translate("MainWindow", "Yes", None))
         self.help.setText(_translate("MainWindow", "View Help", None))
+        self.Connection.setText(_translate("MainWindow", "Connection Test", None))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
 
