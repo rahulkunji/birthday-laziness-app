@@ -16,11 +16,14 @@ class Facebook():
         self.MainWindow.show()
     
     def get_posts(self):
-        query = ("SELECT post_id, actor_id, message FROM stream WHERE filter_key = 'others' AND source_id = me() AND created_time > %s limit 200",self.time_stamp)
+        query = ("SELECT post_id, actor_id, message FROM stream WHERE filter_key = 'others' AND source_id = me() AND created_time > %s limit 200" % self.time_stamp)
         
+        print query
         payload = {'q': query, 'access_token': self.key}
+        print self.key
         r = requests.get('https://graph.facebook.com/fql', params=payload)
         result = json.loads(r.text)
+        #print result['data']
         return result['data']
 
     def help_screen(self): #shows help screen on click
@@ -33,12 +36,12 @@ class Facebook():
         for wallpost in wallposts:
             self.r = requests.get('https://graph.facebook.com/%s' %
                 wallpost['actor_id'])
-            #self.url = 'https://graph.facebook.com/%s/comments' % wallpost['post_id']
-            #self.user = json.loads(self.r.text)
-            #self.message = 'Thanks %s :)' % user['first_name']
-            #self.payload = {'access_token': TOKEN, 'message': message}
-            #self.s = requests.post(url, data=payload)
-            print "Wall post %s done" % wallpost['post_id']
+            self.url = 'https://graph.facebook.com/%s/comments' % wallpost['post_id']
+            self.user = json.loads(self.r.text)
+            self.message = 'Thanks %s :)' % self.user['first_name']
+            self.payload = {'access_token': self.key, 'message': self.message}
+            self.s = requests.post(url, data=payload)
+            print "Wall post %s done" % self.user['first_name']
 
     def test_connection(self):
         self.Form2=QtGui.QWidget()
@@ -52,7 +55,7 @@ class Facebook():
         self.date1=str(self.ui.dateEdit.date().toPyDate())
         self.time_stamp=int(time.mktime(datetime.datetime.strptime(self.date1, "%Y-%m-%d").timetuple()))
         wallposts=self.get_posts()
-        x=""
+        x="names:\n"
         for wallpost in wallposts:
             r = requests.get('https://graph.facebook.com/%s' %
             wallpost['actor_id'])
